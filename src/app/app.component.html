@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="cont">
+    <ul class="list" [style.align-items]="justify" >
+      @for (i of algorithmService.list; track algorithmService.list) {
+        <li class="list-item" [style.background-color]="(i.active ? 'red' : (final ? 'green' : 'blue'))" [style.height]="i.value*6 + 'px'" >{{i.value}}</li>
+      }
+    </ul>
+  </div>
+  <div class="input-group">
+    <label class="text-white" for="velocity">Delay:</label>
+    <input class="form-control" type="number" id="velocity" [(ngModel)]="velocity" />
+    <label class="text-white" for="velocity">Numbers:</label>
+    <input class="form-control" type="number" [(ngModel)]="numberOfNumbers">
+  </div>
+  <div class="buttons" >
+    <button class="btn btn-light button btn1" (click)="execute()" >Run<img src="../assets/icons/ordered-black.svg" alt=""></button>
+    <button class="btn btn-light button btn2" (click)="generate()">Generate<img src="../assets/icons/block-black.svg" alt=""></button>
+  </div>
+  <div class="cont">
+    <select [(ngModel)]="justify">
+      <option value="end">down</option>
+      <option value="center">center</option>
+    </select>
+    <input type="number" name="" [(ngModel)]="algorithmService.max">
+    <input type="number" name="" [(ngModel)]="algorithmService.min">
+  </div>
+</div>
+

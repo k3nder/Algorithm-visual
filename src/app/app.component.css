@@ -1,0 +1,36 @@
+.list {
+  display: flex;
+  list-style: none;
+  padding: 3px;
+  color: white;
+}
+.cont {
+  display: flex;
+  justify-content: center;
+  justify-items: end;
+  align-items: center;
+}
+.buttons {
+  display: flex;
+  margin-top: 1rem;
+}
+.list-item {
+  margin: 4px;
+  height: 40px;
+  background: blue;
+  align-items: center;
+}
+.btn1 {
+  margin-left: 5rem;
+  justify-content: end;
+}
+.btn2 {
+  margin-right: 5rem;
+  margin-left: auto;
+}
+.button img {
+  transition-duration: 200ms;
+}
+.button:hover img {
+  transform: rotate(20deg) scale(0.9);
+}
